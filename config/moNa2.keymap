@@ -17,9 +17,9 @@
 
     macros {
         to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL &kp LEFT_SHIFT &kp S>;
             label = "TO_LAYER_0";
         };
     };
@@ -61,10 +61,10 @@
 
         control {
             bindings = <
-&kp ESCAPE      &trans        &kp ENTER     &trans         &trans                               &trans          &trans          &kp UP          &trans           &trans
-&kp TAB         &none         &kp DELETE    &kp BACKSPACE  &kp END            &trans            &kp HOME        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans          &trans        &trans        &trans         &trans   &trans    &trans            &trans          &trans          &trans          &trans           &trans
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &trans         &trans   &trans    &kp INT_MUHENKAN  &kp INT_HENKAN                                                   &trans
+&kp ESCAPE      &trans               &kp ENTER     &trans         &trans                               &trans          &trans          &kp UP          &trans           &trans
+&trans          &kp LC(PRINTSCREEN)  &kp DELETE    &kp BACKSPACE  &kp END            &trans            &kp HOME        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans          &trans               &trans        &trans         &trans   &trans    &trans            &trans          &trans          &trans          &trans           &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0         &bt BT_SEL 1  &trans         &trans   &trans    &kp INT_MUHENKAN  &kp INT_HENKAN                                                   &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
